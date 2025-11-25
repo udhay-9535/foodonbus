@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FoodOnBus — Universal Dashboard (Neon)</title>
+
+  <link rel="stylesheet" href="styles/neon.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+
+<body>
+  <div class="shell dashboard-shell">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand-block">
+
+        <!-- 🚍 BUS LOGO ADDED HERE -->
+        <img src="assets/bus_logo.png" alt="FoodOnBus Logo" class="brand-logo">
+
+        <div class="brand">FoodOnBus</div>
+        <div class="subtitle">Universal Control Center</div>
+      </div>
+
+      <nav class="side-nav">
+        <a class="active" data-page="overview">Overview</a>
+        <a data-page="orders">Orders</a>
+        <a data-page="menu">Menu</a>
+        <a data-page="drivers">Drivers</a>
+        <a data-page="buses">Buses</a>
+        <a data-page="map">Live Map</a>
+        <a data-page="analytics">Analytics</a>
+        <a data-page="passengers">Passenger Monitor</a>
+        <a data-page="settings">Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main Window -->
+    <div class="dashboard-main">
+
+      <header class="topbar">
+        <div class="top-left">
+          <h3 id="pageTitle">Overview</h3>
+          <p class="muted" id="pageSubtitle">Live operations & system monitoring</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn-ghost">Notifications (3)</button>
+          <div class="profile">Admin</div>
+        </div>
+      </header>
+
+      <!-- PAGES LOADED DYNAMICALLY -->
+      <main id="content" class="dashboard-grid"></main>
+
+      <footer class="dashboard-footer muted">
+        FoodOnBus • Universal Neon Dashboard v6
+      </footer>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/universal_dashboard.js"></script>
+
+</body>
+</html>
